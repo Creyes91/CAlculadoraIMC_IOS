@@ -31,6 +31,9 @@ class ViewController: UIViewController {
         weightView.layer.cornerRadius = 16
         resultView.layer.cornerRadius = 16
         
+        
+        
+        
         //slider.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2)
         
         // Do any additional setup after loading the view.
@@ -63,6 +66,8 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
     func printImc(result: Float) -> Void {
         
         
@@ -72,16 +77,16 @@ class ViewController: UIViewController {
             resultView.backgroundColor = UIColor.under
             commentLabel.text = "bajo peso"
         case 18.5..<25:
-            resultView.backgroundColor = UIColor.green
+            resultView.backgroundColor = UIColor.normal
             commentLabel.text = "peso normal"
         case 25..<30:
-            resultView.backgroundColor = UIColor.yellow
+            resultView.backgroundColor = UIColor.over
             commentLabel.text = "sobrepeso"
         case 30..<35:
-            resultView.backgroundColor = UIColor.orange
+            resultView.backgroundColor = UIColor.obesity
             commentLabel.text = "obesidad"
         default:
-            resultView.backgroundColor = UIColor.red
+            resultView.backgroundColor = UIColor.morbid
             commentLabel.text = "obesidad morbida"
         }
         
