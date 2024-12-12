@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var heightView: UIView!
     @IBOutlet weak var slider: UISlider!
     
+    @IBOutlet weak var commentLabel: UILabel!
     var height: Int = 120
     var weight: Float = 60.0
     
@@ -30,18 +31,7 @@ class ViewController: UIViewController {
         weightView.layer.cornerRadius = 16
         resultView.layer.cornerRadius = 16
         
-        
-        
-        
-        
         //slider.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2)
-        
-        
-        
-        
-        
-        
-        
         
         // Do any additional setup after loading the view.
     }
@@ -62,24 +52,41 @@ class ViewController: UIViewController {
         let h = Float(height)/100
         let result = (weight/pow(h,2))
         
+       
+        printImc(result: result)
+        
+    }
+    
+    @IBAction func closeInfo (_ sender: UIStoryboardSegue)
+    {
+        
+        
+    }
+    
+    func printImc(result: Float) -> Void {
+        
+        
+        
         switch result{
         case ..<18.5:
-            resultLabel.textColor = UIColor.cyan
+            resultView.backgroundColor = UIColor.under
+            commentLabel.text = "bajo peso"
         case 18.5..<25:
-            resultLabel.textColor = UIColor.green
+            resultView.backgroundColor = UIColor.green
+            commentLabel.text = "peso normal"
         case 25..<30:
-            resultLabel.textColor = UIColor.yellow
+            resultView.backgroundColor = UIColor.yellow
+            commentLabel.text = "sobrepeso"
         case 30..<35:
-            resultLabel.textColor = UIColor.orange
+            resultView.backgroundColor = UIColor.orange
+            commentLabel.text = "obesidad"
         default:
-            resultLabel.textColor = UIColor.red
+            resultView.backgroundColor = UIColor.red
+            commentLabel.text = "obesidad morbida"
         }
         
       
         resultLabel.text = String(format: "%.2f", result)
-        
-        
-        
         
     }
     

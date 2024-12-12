@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "tabla-informacion-bmi-indice-masa-corporal-mujer_90220-261.PNG",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
